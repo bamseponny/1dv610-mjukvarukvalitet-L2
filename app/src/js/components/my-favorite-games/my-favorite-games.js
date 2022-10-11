@@ -36,13 +36,23 @@ template.innerHTML = `
         background-color: aqua;
        }
 
+       #my-list {
+        display: none;
+       }
+
+       #my-statistics {
+        display: none;
+       }
+
  </style>
     <div id="my-favorite-games">
+      <div id="my-list"><my-list></my-list></div>
+      <div id="my-statistics"><my-statistics></my-statistics></div>
     </div>
     <div id="bottom-parent">
       <div id="bottom-menu">
         <button id="list-btn">The List</button>
-        <button id="list-btn">The Statistics</button>
+        <button id="statistics-btn">The Statistics</button>
       </div>
     </div>
    `
@@ -59,22 +69,21 @@ customElements.define('my-favorite-games',
       super()
       this.attachShadow({ mode: 'open' }).append(template.content.cloneNode(true))
       this.myFavoriteGames = this.shadowRoot.querySelector('#my-favorite-games')
+      this.myList = this.shadowRoot.querySelector('#my-list')
+      this.myStatistics = this.shadowRoot.querySelector('#my-statistics')
 
       this.listBtn = this.shadowRoot.querySelector('#list-btn')
       this.listBtn.addEventListener('click', (event) => {
-        console.log('Help!')
-        this.openList(event)
+        event.preventDefault()
+        this.myList.style.display = 'block'
+        this.myStatistics.style.display = 'none'
       })
-    }
 
-    /**
-     * Opens the list.
-     *
-     * @param {*} event - An event that occurs while clicking The List button.
-     */
-    openList (event) {
-      event.preventDefault()
-      const theList = document.createElement('my-list')
-      this.myFavoriteGames.append(theList)
+      this.statisticsBtn = this.shadowRoot.querySelector('#statistics-btn')
+      this.statisticsBtn.addEventListener('click', (event) => {
+        event.preventDefault()
+        this.myList.style.display = 'none'
+        this.myStatistics.style.display = 'block'
+      })
     }
   })
