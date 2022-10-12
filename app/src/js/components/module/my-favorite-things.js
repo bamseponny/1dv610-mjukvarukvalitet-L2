@@ -115,41 +115,15 @@ export class MyFavoriteThings {
   /**
    * Returns a sorted array with favorite things in the library depending on the chosen data type and data value.
    *
-   * @param {string} dataType - Chosen data type.
-   * @param {*} dataValue - Chosen data value.
-   * @returns {Array[]} strings - Returns an array of strings.
+   * @param {*} formatValue - Chosen data value.
+   * @returns {Array[]} array - Returns an array of objects.
    */
-  filterByData (dataType, dataValue) {
-    if (dataType !== undefined) {
-      switch (dataType) {
-        case 'format': {
-          const filterTheLibrary = library.filter((listOfThings) => listOfThings.format === dataValue)
-          this.validateArray(filterTheLibrary)
-          const filteredLibrary = filterTheLibrary.map(format => format.title).sort()
+  filterByFormat (formatValue) {
+    if (formatValue !== undefined) {
+      const filteredLibrary = library.filter((listOfThings) => listOfThings.format === formatValue)
+      this.validateArray(filteredLibrary)
 
-          return filteredLibrary
-        }
-        case 'releaseYear': {
-          const filterTheLibrary = library.filter((listOfThings) => listOfThings.releaseYear === dataValue)
-          this.validateArray(filterTheLibrary)
-          const filteredLibrary = filterTheLibrary.map(format => format.title).sort()
-
-          return filteredLibrary
-        }
-        case 'grade': {
-          if (dataValue < this.minimumGrade || dataValue > this.maximumGrade || typeof dataValue !== 'number') {
-            throw new Error(`Please choose a grade between ${this.minimumGrade} and ${this.maximumGrade}.`)
-          } else {
-            const filterTheLibrary = library.filter((listOfThings) => listOfThings.grade === dataValue)
-            this.validateArray(filterTheLibrary)
-            const filteredLibrary = filterTheLibrary.map(grade => grade.title).sort()
-
-            return filteredLibrary
-          }
-        }
-        default:
-          throw new Error('This data type is not supported.')
-      }
+      return filteredLibrary
     } else {
       throw Error('Please pass a valid data type.')
     }
