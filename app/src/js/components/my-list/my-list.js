@@ -139,7 +139,7 @@ customElements.define('my-list',
     }
 
     /**
-     * List video games.
+     * List all video games, or via specific format.
      *
      * @param {*} listOfTitles - Array of object.
      */
