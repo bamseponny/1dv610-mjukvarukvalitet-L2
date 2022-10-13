@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-import { MyFavoriteThings } from '../../../../../module/my-favorite-things'
+import { MyFavoriteThings } from '../../../../../module-my-favorite-things/my-favorite-things'
 
 const template = document.createElement('template')
 template.innerHTML = `
@@ -84,7 +84,7 @@ customElements.define('my-list',
       this.list = this.shadowRoot.querySelector('#list')
 
       const favoriteGames = new MyFavoriteThings()
-      const completeList = favoriteGames.listAllTitles()
+      const completeList = favoriteGames.listAllLibraryObjects()
 
       this.n64Btn = this.shadowRoot.querySelector('#n64-btn')
       this.ps4Btn = this.shadowRoot.querySelector('#ps4-btn')

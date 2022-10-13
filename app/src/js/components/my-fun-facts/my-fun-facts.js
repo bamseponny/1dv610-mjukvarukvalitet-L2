@@ -6,7 +6,7 @@
  * @version 1.0
  */
 
-import { MyFavoriteThings } from '../../../../../module/my-favorite-things'
+import { MyFavoriteThings } from '../../../../../module-my-favorite-things/my-favorite-things'
 
 const template = document.createElement('template')
 template.innerHTML = `
