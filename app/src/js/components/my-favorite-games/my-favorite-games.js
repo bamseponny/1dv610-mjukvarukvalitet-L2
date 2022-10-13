@@ -15,6 +15,9 @@ template.innerHTML = `
          height: 100vh;  /* viewport height */
          background-color: red;
          background-size: cover;
+         background-repeat: no-repeat;
+         background-image: url(js/components/my-favorite-games/lib/background.jpg);
+         background-position: center; 
         }
 
         #bottom-parent {

@@ -18,7 +18,8 @@ template.innerHTML = `
           background-color: #F2D2BD;
           background-size: cover;
           overflow: auto;
-          color: #333;
+          color: black;
+          background: rgba(76, 175, 80, 0.3)
          }
 
          #list {

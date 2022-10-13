@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2/issues"
   },
-  "homepage": "https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2#readme"
+  "homepage": "https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2#readme",
+  "dependencies": {
+    "chart.js": "^3.9.1"
+  }
 }
