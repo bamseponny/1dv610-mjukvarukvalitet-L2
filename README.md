@@ -1,7 +1,7 @@
 # My Favorite Games
 
 A web application which demonstrates a video game collection and statistics concerning grades and play time.
-This application is meant for an **end-user** with a video game collection. If you are a **developer** you should check out the GitHub repositorium with the [My Favorite Things](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1), with methods and a database which this application implements. If you are an **examinator** all of the above of course is of interest, and also the [testing](README.md) and [reflections](reflektion.md) should be of great interest.
+This application is meant for an **end-user** with a video game collection. If you are a **developer** you should check out the GitHub repositorium with the [My Favorite Things](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1), with methods and a database which this application implements. If you are an **examinator** all of the above of course is of interest, and also the [testing](testrapport.md) and [reflections](reflektion.md) should be of great interest.
 
 ## Description
 

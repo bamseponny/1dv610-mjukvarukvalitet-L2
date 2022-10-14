@@ -1,6 +1,6 @@
 
 /**
- * The my-fun-facts component module.
+ * The my-statistics component.
  *
  * @author Fredrik Eriksson <ferth09@student.lnu.se>
  * @version 1.0
@@ -12,7 +12,7 @@ const template = document.createElement('template')
 template.innerHTML = `
        <style>
     
-           #my-fun-facts {
+           #my-statistics {
             display: block;
             width: 100vw;
             height: 100vh;
@@ -29,7 +29,7 @@ template.innerHTML = `
           }
    
     </style>
-        <div id="my-fun-facts">
+        <div id="my-statistics">
           <h1>Grade facts</h1>
             <ul>
               <li id="average-grade"></li>
@@ -47,13 +47,7 @@ template.innerHTML = `
       `
 
 customElements.define('my-statistics',
-  /**
-   * Represents a my-statistics element.
-   */
   class extends HTMLElement {
-    /**
-     * Creates an instance of the current type.
-     */
     constructor () {
       super()
       this.attachShadow({ mode: 'open' }).append(template.content.cloneNode(true))
@@ -67,91 +61,77 @@ customElements.define('my-statistics',
       this.medianGrade = this.shadowRoot.querySelector('#median-grade')
       this.modeGrade = this.shadowRoot.querySelector('#mode-grade')
 
-      const favoriteGamesModule = new MyFavoriteThings()
+      const favoriteThingsLibrary = new MyFavoriteThings()
 
-      this.printTotalHours(favoriteGamesModule)
-      this.printDaysSpent(favoriteGamesModule)
-      this.printAverageHours(favoriteGamesModule)
-      this.printMinMaxHours(favoriteGamesModule)
+      this.printTotalHours(favoriteThingsLibrary)
+      this.printDaysSpent(favoriteThingsLibrary)
+      this.printAverageHours(favoriteThingsLibrary)
+      this.printMinMaxHours(favoriteThingsLibrary)
 
-      this.printAverageGrade(favoriteGamesModule)
-      this.printMedianGrade(favoriteGamesModule)
-      this.printModeGrade(favoriteGamesModule)
+      this.printAverageGrade(favoriteThingsLibrary)
+      this.printMedianGrade(favoriteThingsLibrary)
+      this.printModeGrade(favoriteThingsLibrary)
     }
 
     /**
-     * Print the total hours spent to the browser.
-     *
-     * @param {*} module - module object.
+     * @param {*} library - instance of My Favorite Things library.
      */
-    printTotalHours (module) {
-      const totalHours = module.calculateTotalHoursSpent()
+    printTotalHours (library) {
+      const totalHours = library.calculateTotalHoursSpent()
       const listText = document.createTextNode('You have played for ' + totalHours + ' hours.')
       this.totalHours.append(listText)
     }
 
     /**
-     * Print the total days spent to the browser.
-     *
-     * @param {*} module - module object.
+     * @param {*} library - module object.
      */
-    printDaysSpent (module) {
-      const totalDays = module.calculateNumberOfDaysSpent()
+    printDaysSpent (library) {
+      const totalDays = library.calculateNumberOfDaysSpent()
       const listText = document.createTextNode('That is roughly ' + totalDays + ' days. Well done!')
       this.daysSpent.append(listText)
     }
 
     /**
-     * Print the average hours spent to the browser.
-     *
-     * @param {*} module - module object.
+     * @param {*} library - module object.
      */
-    printAverageHours (module) {
-      const averageHours = module.calculateAverageHoursSpent()
+    printAverageHours (library) {
+      const averageHours = library.calculateAverageHoursSpent()
       const listText = document.createTextNode('The average of the hours played is ' + averageHours + ' hours.')
       this.averageHours.append(listText)
     }
 
     /**
-     * Print the minimum and maximum grade value to the browser.
-     *
-     * @param {*} module - module object.
+     * @param {*} library - module object.
      */
-    printMinMaxHours (module) {
-      const minMaxHours = module.calculateMinMaxHours()
+    printMinMaxHours (library) {
+      const minMaxHours = library.calculateMinMaxHours()
       const listText = document.createTextNode('Least time spent: ' + minMaxHours[0] + ' hours. The Most? ' + minMaxHours[1] + '.')
       this.minMaxHours.append(listText)
     }
 
     /**
-     * Print the average grade to the browser.
-     *
-     * @param {*} module - module object.
+     * @param {*} library - module object.
      */
-    printAverageGrade (module) {
-      const averageGrade = module.calculateAverageGrade()
+    printAverageGrade (library) {
+      const averageGrade = library.calculateAverageGrade()
       const listText = document.createTextNode('The average of the grade (1 to 5) is ' + averageGrade + '.')
       this.averageGrade.append(listText)
     }
 
     /**
-     * Print the median grade to the browser.
-     *
-     * @param {*} module - module object.
+     * @param {*} library - module object.
      */
-    printMedianGrade (module) {
-      const medianGrade = module.calculateMedianGrade()
+    printMedianGrade (library) {
+      const medianGrade = library.calculateMedianGrade()
       const listText = document.createTextNode(medianGrade + ' is the median of the grade.')
       this.medianGrade.append(listText)
     }
 
     /**
-     * Print the mode of the grade to the browser.
-     *
-     * @param {*} module - module object.
+     * @param {*} library - module object.
      */
-    printModeGrade (module) {
-      const modeGrade = module.calculateModeGrade()
+    printModeGrade (library) {
+      const modeGrade = library.calculateModeGrade()
 
       if (modeGrade.length === 1) {
         const listText = document.createTextNode('Most frequent value of the grade is ' + modeGrade + '.')

@@ -1,5 +1,5 @@
 /**
- * The my-list component module.
+ * The my-game-list component module.
  *
  * @author Fredrik Eriksson <ferth09@student.lnu.se>
  * @version 1.0
@@ -69,9 +69,9 @@ template.innerHTML = `
      </div>
     `
 
-customElements.define('my-list',
+customElements.define('my-game-list',
   /**
-   * Represents a my-list element.
+   * Represents a my-game-list element.
    */
   class extends HTMLElement {
     /**

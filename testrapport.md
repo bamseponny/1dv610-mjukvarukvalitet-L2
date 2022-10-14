@@ -1,4 +1,4 @@
-# Testning
+# Testrapport
 
 ### Hur jag testat
 
@@ -16,27 +16,11 @@ Målet med min testning är att skapa överblick över testningen  och dokumente
 
 | User cases| Testmetod | Status|       
 | --------- |:---------:|:-----:|
-| UC 1.1    | Manuell   |✅ |
-| UC 1.2    | Manuell   |✅ |
-| UC 2.1    | Manuell   |✅ |
-| UC 2.2    | Manuell   |✅ |
-| UC 3.1    | Manuell   |✅ |
-| UC 3.2    | Manuell   |✅ |
-| UC 4.1    | Manuell   |✅ |
-| UC 4.2    | Manuell   |✅ |
-| UC 5.1    | Manuell   |✅ |
-| UC 5.2    | Manuell   |✅ |
-| UC 5.3    | Manuell   |✅ |
-| UC 5.4    | Manuell   |✅ |
-| UC 5.5    | Manuell   |✅ |
-| UC 5.6    | Manuell   |✅ |
-| UC 6.1    | Manuell   |✅ |
-| UC 6.2    | Manuell   |✅ |
-| UC 6.3    | Manuell   |✅ |
-| UC 6.4    | Manuell   |✅ |
-| UC 6.5    | Manuell   |✅ |
-| UC 7.1    | Manuell   |✅ |
-| UC 7.2    | Manuell   |✅ |
+| UC 1    | Manuell   |✅ |
+| UC 2    | Manuell   |✅ |
+| UC 3    | Manuell   |✅ |
+| UC 4    | Manuell   |✅ |
+| UC 5    | Manuell   |✅ |
 
 ***
 

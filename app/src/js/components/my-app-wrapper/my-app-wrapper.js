@@ -1,5 +1,5 @@
 /**
- * The my-favorite-games component module.
+ * The my-app-wrapper component.
  *
  * @author Fredrik Eriksson <ferth09@student.lnu.se>
  * @version 1.0
@@ -16,7 +16,7 @@ template.innerHTML = `
          background-color: red;
          background-size: cover;
          background-repeat: no-repeat;
-         background-image: url(js/components/my-favorite-games/lib/background.jpg);
+         background-image: url(js/components/my-app-wrapper/lib/background.jpg);
          background-position: center; 
         }
 
@@ -49,7 +49,7 @@ template.innerHTML = `
 
  </style>
     <div id="my-favorite-games">
-      <div id="my-list"><my-list></my-list></div>
+      <div id="my-list"><my-game-list></my-game-list></div>
       <div id="my-statistics"><my-statistics></my-statistics></div>
     </div>
     <div id="bottom-parent">
@@ -60,14 +60,9 @@ template.innerHTML = `
     </div>
    `
 
-customElements.define('my-favorite-games',
-/**
- * Represents a my-favorite-games element.
- */
+customElements.define('my-app-wrapper',
+
   class extends HTMLElement {
-  /**
-   * Creates an instance of the current type.
-   */
     constructor () {
       super()
       this.attachShadow({ mode: 'open' }).append(template.content.cloneNode(true))
