@@ -109,10 +109,12 @@ Min applikation är uppbyggd med webbkomponenter. Komponenterna är byggda efter
 
 ## Avslutande reflektion
 
+Det fanns verkligen ett syfte i att göra många misstag med koden i laboration 1, för då fanns det extra mycket att bearbeta och reflektera kring. Givetvis är jag inte fullärd, men det är man å andra sidan aldrig.
+
+Och på tal om att aldrig bli fullärd: under första året dykte vi ner i webbkomponenter, som jag (ännu) inte är helt bekväm med. Det var en utmaning att sätta sig in i det igen. Är mer bekväm med ramverk som React, men då det var klasser och objektorientering som gällde fick man ta tjuren vid hornen. Otäckt, tidsödande, men också lärorikt.
+
 Under första året har jag kodat med inställningen *"Det ska funka!"*, men nu har jag även fått insikten att *"Det ska funka, för andra!"* Min kod är ingen isolerad ö. Den ska läsas av fler. Den här kursen var vad jag behövde på min resa mot att bli webbprogrammerare. Jag var redo för den nu.
 
 Djävulen sitter onekligen i detaljerna. Att skriva tydliga variabelnamn och logiska metoder låter inte som kärnfysik, men det finns många falluckor på vägen. Ganska ofta måste man också hitta kompromisser i sina lösningar. Det är givetvis bra att vara tydlig i metodnamn men drar man det till sin spets kan det rentav bli så plottrigt att tydligheten tackar för sig. Min nyckel har varit ordet "lagom". Att *inte* dra reglerna till sin spets gör det ofta enkelt att hålla dem.
 
-Det tydliga och rena ska löpa som en röd tråd genom allt: klasser, kommentarer, systemets arkitektur. Det är mycket som blivit tydligare. En metod ska exempelvis göra en sak, och göra den bra. Tidigare har jag inte reflekterat över detta, och jag har heller inte haft tydliga ramar. Det kändes (för att återgå till ordet) lagom att introduceras för detta nu.
-
-Det fanns verkligen ett syfte i att göra många misstag med koden i laboration 1, för då fanns det extra mycket att bearbeta och reflektera kring. Givetvis är jag inte fullärd, men det är man å andra sidan aldrig.
+Det tydliga och rena ska löpa som en röd tråd genom allt: klasser, kommentarer, systemets arkitektur. Det är mycket som blivit tydligare. En metod ska exempelvis göra en sak, och göra den bra. Tidigare har jag inte reflekterat över detta, och jag har heller inte haft tydliga ramar. Det kändes (för att återgå till ordet) lagom att introduceras för detta nu. 
