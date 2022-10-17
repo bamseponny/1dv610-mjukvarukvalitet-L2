@@ -53,6 +53,45 @@ Felhantering ska enligt Clean Code (103–112) inte dölja logiken. Den ska hant
 
 <br>
 
+## 8. Boundaries
+
+Min applikation (L2) använder sig av ett fåtal externa paket, som den är mer eller mindre beroende av. Eslint för att uppnå en enhetlig kodstandard och Vite, för att jag ska kunna köra applikationen i en browser utan att behöva driftsätta den. Dessa två är så kallade "dev dependencies", och inget en slutanvändare behöver ta hänsyn till. Starkare är beroendet till mitt eget bibliotek (L1). Gränserna för min app flyttas således, vilket kapitlet Boundaries (Clean Code, 113–120) handlar om. Mitt bibliotek ger appen mer funktionalitet, men använder vi oss av tredjepartsberoenden är det av vikt att vi ser till att dessa är testade (116). Detta gjorde jag i just L1:an, och under arbetet med L2:an har ytterligare L1-tester skett då arbetet fortskridit. Undertill: ett exempel på när min applikation använder sig av funktionalitet från mitt bibliotek.
+
+![chapter8](img/chapter8.jpg)
+
+<br>
+
+## 9. Unit Tests
+
+Bokens nionde kapitel handlar om testdriven utveckling (Clean Code. 121–133). Boken trycker *hårt* på att man ska skriva tester innan själva koden (122), vilket är en regel jag ärligt talat brutit mot. Dock såg jag till att skriva kraven allra först vilket på sätt och vis är en grundbult för min manuella testning; det är ju dessa jag sedermera testat mot. Kurslitteraturen trycker också hårt på att göra *"rena tester"*, vilka handlar om tre saker: *"Readability, readability, and readability"* (124). Det som gör tester läsbara är att de exempelvis är enkla och luftiga. Det är något jag tagit till mig när jag producerat mina tester. Då applikationen i sig är ganska enkel och inte tar input fick jag mycket, så att säga, "på köpet". Samtidigt ska man eftersträva att hålla såväl kod som testning ren. Den ska vara enkel att läsa och enkel att förstå. Ser vi nedan på ett testexempel tycker jag det är enkelt att förstå. Dock kan jag känna att "UC1" för gemene man kan vara knepigt att förstå. Här hade jag kunnat vara tydligare, då förkortningar kan vara oväntade bromsklossar.
+
+![chapter9](img/chapter9.jpg)
+
+<br>
+
+## 10. Classes
+
+Boken handlar i mångt och mycket om att gå ner på detaljnivå: metoder och variabelnamn. I kapitel 10 av Clean Code (135–151) lyfter man dock blicken en smula och kollar på hur vi organiserar koden på ett högre plan, i olika klasser. I kapitel 5 (ovan) resonerar jag lite om hur jag tänkt med uppdelningen av klasser, så då kan vi i stället rikta fokus mot min modul (L1). Enligt boken ska klasser, liksom metoder, vara små. Samma princip råder, och klasser ska ha ett ansvarsområde (138). Något som är upp till tolkning, men lite självkritiskt kan jag konstatera att det förmodligen varit bra för tydligheten att bryta ut modulen lite mer. Funktionaliten för biblioteket finns i `my-favorite-things.js`, men det hade kanske kunnat bli tydligare om jag exempelvis bröt ut delarna kring kalkylering till en egen klass. Samtidigt är mitt bibliotek relativt litet. Det snuddar inte vid taket för klasser (500 rader enligt boken), och jag tycker personligen det blir tydligt att bibliotekets funktionalitet ligger i en klass. Felhantering och själva databasen har jag brutit ut, då det kändes fullständigt naturligt.
+
+![chapter10](img/chapter10.jpg)
+
+<br>
+
+## 11. Systems
+
+Min applikation är uppbyggd med webbkomponenter. Komponenterna är byggda efter olika ansvarsområden; my-app-wrapper omsluter applikationen och sätter huvudsakliga style-regler medan my-game-list och my-statistics har ansvar för att visa listor respektive statistik. Jag föreställer mig att denna tydlighet gör det enkelt att bygga ut applikationen ytterligare. Det finns utrymme att växa. Kapitel 11 i Clean Code (153–170) slår fast att det inte räcker att klasser och metoder är rena, utan att det finns ett syfte i att göra systemet rent. Att brista redan där är onödigt. Även om appen, som sagt, är liten är det naivt att utgå ifrån att den alltid kommer vara liten (157–161). Komponenterna ska vara tydligt beskrivna och ligga på lika tydligt anvisade platser. Det jag mest funderade kring var vad jag skulle placera mitt bibliotek (L1). Till sist landade jag i att placera den utanför appen (logiskt) och att välja att inte pusha upp den (också logiskt). Logiken har varit en röd tråd arbetet igenom.
+
+![chapter11](img/chapter11.jpg)
+
+<br>
+
+## Avslutande reflektion
+
+
+170
+
+
+
 //////// Gå igenom all kod inklusive kod från laboration 1 och uppdatera enligt bokens clean code kapitel 2-11 och det vi diskuterat på föreläsningar och workshops. Skriv en kort (4-6 meningar) reflektion för varje kapitel om hur just det kapitlet har påverkat eller inte påverkat din kod. Använd bokens termer. Ge exempel med läsbara screenshots från er kod till varje reflektion. Dokumentera detta till mig i ett separat dokument reflection.md där jag är mottagaren.
 
 Fokusera på tydlighet, variation, ärlighet och vad som är intressant. Exempelvis om du har icke självklara överväganden med olika kvalitetsregler som står i konflikt med varandra så är dessa extra intressanta.

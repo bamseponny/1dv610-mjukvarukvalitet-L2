@@ -100,6 +100,7 @@ Målet med min testning är att skapa överblick över testningen  och dokumente
 **Testinstruktion**
 1. Starta applikationen via `npm run dev`.
 2. Navigera via terminalens länk till önskad browser.
+3. Klicka på knappen *The Statistics*.
 
 **Förväntat utfall:** 
 
