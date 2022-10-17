@@ -1,16 +1,47 @@
+# Vision och kravspecifikation
+
+Målet med den här applikationen, My Favorite Games, är att bygga en app som nyttjar biblioteket My Favorite Things, vilket återfinns via [Github](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1). Applikationen riktar sig till en slutanvändare med en spelsamling, vars listor visas med tillhörande statistik.
+
+***
+
+## Kravspecifikation
+
+Notera: Dessa krav återfinns även via issues på [Github](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2/issues?q=is%3Aissue+is%3Aclosed), där de specificeras ytterligare.
+
+***
+
+### Funktionella krav
+
+* Som en slutanvändare vill jag presenteras med en startsida.
+* Som en slutanvändare vill jag navigera i applikationen via en navigeringsmeny.
+* Som en slutanvändare vill jag se en lista av min spelsamling.
+* Som en slutanvändare vill jag se betygsstatitik av spelsamlingen.
+* Som en slutanvändare vill jag se tidsstatitik av spelsamlingen.
+
+***
+
+### Icke-funktionella krav
+
+* Applikationen ska vara användarvänlig.
+* Applikationen ska vara väldokumenterad.
+
+***
+
 # Testrapport
 
 ### Hur jag testat
 
-***
 
 Jag har använt mig av manuell testning, och byggt vidare på det vi lärde oss i kursen 1DV613. Då skalan varit mindre har det inte blivit några iterationer, utan en enskild testtabell och beskrivning av de olika testerna.
 
-### Testfall
-
 ***
 
+### Testfall
+
+
 Målet med min testning är att skapa överblick över testningen  och dokumentera de enskilda testerna. Samtliga tester sker mot version 1 av projektet.
+
+***
 
 ### Testrapport
 

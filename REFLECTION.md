@@ -1,12 +1,16 @@
 # Reflektion
 
+Reflektioner från boken Clean Code (C. Martin, Robert. 2009. Clean Code) som bygger på kod från laborationerna [L1](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1) och [L2](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2).
+
 ## 2. Meaningful Names
 
-Att något så enkelt kan vara så svårt. I teorin är det enkelt att säga: ett namn ska ska vara avslöjande, lätt att uttala och vara sökbart; alla regler från kapitel två av kurslitteraturen (C. Martin, Robert. 2009. Clean Code, 17-30). Att lyckas uppfylla *en* regel är i sig inte svårt. Metodnamnet **calculateAverage** (i L1) är lätt att uttala, men medelvärdet av *vad*? Häri ligger kapitels nyckel. Meningsfulla namn är inte *en* regel, utan flera stycken. Exemplet nedan (L1) hette till en början **listAllTitles**. Det var inte helt sanningsenligt, då metoden listar alla objekt i biblioteket. Därför: **listAllLibraryObjects**. Då uppfylls flera av Clean Codes krav, så som: namn som avslöjar intentionen (17-19), har namn som jag är lätt att uttala (21-22), är sökbart (22-23). Samtidigt får man göra personliga avvägningar. Ska jag vara *riktigt* noga borde namnet vara **listAllLibraryObjectsSorted**, men då börjar det bli svårt att läsa. Det är svårt att möta allt till 100 procent, och jag får kompromissa.
+Att något så enkelt kan vara så svårt. I teorin är det enkelt att säga: ett namn ska ska vara avslöjande, lätt att uttala och vara sökbart; alla regler från kapitel två av kurslitteraturen (Clean Code, 17-30). Att lyckas uppfylla *en* regel är i sig inte svårt. Metodnamnet **calculateAverage** (i L1) är lätt att uttala, men medelvärdet av *vad*? Häri ligger kapitels nyckel. Meningsfulla namn är inte *en* regel, utan flera stycken. Exemplet nedan (L1) hette till en början **listAllTitles**. Det var inte helt sanningsenligt, då metoden listar alla objekt i biblioteket. Därför: **listAllLibraryObjects**. Då uppfylls flera av Clean Codes krav, så som: namn som avslöjar intentionen (17-19), har namn som jag är lätt att uttala (21-22), är sökbart (22-23). Samtidigt får man göra personliga avvägningar. Ska jag vara *riktigt* noga borde namnet vara **listAllLibraryObjectsSorted**, men då börjar det bli svårt att läsa. Det är svårt att möta allt till 100 procent, och jag får kompromissa.
 
 ![chapter2](img/chapter2.jpg)
 
 <br>
+
+***
 
 ## 3. Functions
 
@@ -21,6 +25,8 @@ I refaktoreringen hade jag bokens ord färskt i minnet. Metoden delades i tre, s
 
 <br>
 
+***
+
 ## 4. Comments
 
 Boken lyfter ett citat från Brian W. Kernighan and P. J. Plaugher: "*Don’t comment bad code—rewrite it.*" (Clean Code, 53). Väl sammanfattat. Under första året av utbildningen har jag bitvis känt mig låst vid kommentarerna. Det har känts "kladdigt" att kommentera minsta småmetod på ett sätt som i princip gör dem dubbelt så stora. Till vilken nytta? Boken ser kommentarer som just *"misslyckande"*. Behöver vi de har vi misslyckats (54). Jag tog fasta på detta men för att hålla ordning och reda beslöt jag mig för att ta bort "svepande" kommentarer, och bara hålla mig till parametrar och retursatser. Boken menar visserligen att de flesta kommentarer är *"dåliga kommentarer"* (59), men jag behövde hitta något slags mellanting. Det kändes naturligt. När jag ser tillbaka på det kan jag ändå känna att min mellantingsregel gjorde koden onödigt kladdigt. Mitt exempel (L2) hade inte behövt kommentar, ärligt talat. Att i stället döpa om parametern till *favoriteThingsInstance* hade varit nog så tydligt. Det hade sparat uttrymme – och kladd.
@@ -28,6 +34,8 @@ Boken lyfter ett citat från Brian W. Kernighan and P. J. Plaugher: "*Don’t co
 ![chapter4](img/chapter4.jpg)
 
 <br>
+
+***
 
 ## 5. Formatting
 
@@ -37,6 +45,8 @@ Ordning och reda är återkommande för mig, och ger mig också ro. Det gäller 
 
 <br>
 
+***
+
 ## 6. Objects and Data Structures
 
 Kapitel 6 (Clean Code, 93–101) är bedrägligt kort, men jag har lite svårt att få huvudet kring det. En utmaning, kort sagt. I sektionen kring The Law of Demeter (97–100) tar boken upp kod som kan liknas vid tågkrasch. Jag kände mig träffad (om än inte av tågkraschen). Bokens exempel är `final String outputDir = ctxt.getOptions().getScratchDir().getAbsolutePath();`. Den bryter både mot regeln (en klass ska bara känna till sina metoder), men anses också vara ett slappt sätt överlag att skriva kod. Under min studietid har jag ofta återvänt till gammal kod och funderat på, rent ut sagt, vad tusan som pågår. Andra exempel än det nedan har varit värre då jag under L1 och L2 arbetat för att strukturera koden bättre. Här hade jag dock kunnat bryta ut det ytterligare lite till, så att koden kunde bli mer tydlig och strukturerad. 
@@ -44,6 +54,8 @@ Kapitel 6 (Clean Code, 93–101) är bedrägligt kort, men jag har lite svårt a
 ![chapter6](img/chapter6.jpg)
 
 <br>
+
+***
 
 ## 7. Error Handling
 
@@ -53,6 +65,8 @@ Felhantering ska enligt Clean Code (103–112) inte dölja logiken. Den ska hant
 
 <br>
 
+***
+
 ## 8. Boundaries
 
 Min applikation (L2) använder sig av ett fåtal externa paket, som den är mer eller mindre beroende av. Eslint för att uppnå en enhetlig kodstandard och Vite, för att jag ska kunna köra applikationen i en browser utan att behöva driftsätta den. Dessa två är så kallade "dev dependencies", och inget en slutanvändare behöver ta hänsyn till. Starkare är beroendet till mitt eget bibliotek (L1). Gränserna för min app flyttas således, vilket kapitlet Boundaries (Clean Code, 113–120) handlar om. Mitt bibliotek ger appen mer funktionalitet, men använder vi oss av tredjepartsberoenden är det av vikt att vi ser till att dessa är testade (116). Detta gjorde jag i just L1:an, och under arbetet med L2:an har ytterligare L1-tester skett då arbetet fortskridit. Undertill: ett exempel på när min applikation använder sig av funktionalitet från mitt bibliotek.
@@ -60,6 +74,8 @@ Min applikation (L2) använder sig av ett fåtal externa paket, som den är mer 
 ![chapter8](img/chapter8.jpg)
 
 <br>
+
+***
 
 ## 9. Unit Tests
 
@@ -69,6 +85,8 @@ Bokens nionde kapitel handlar om testdriven utveckling (Clean Code. 121–133). 
 
 <br>
 
+***
+
 ## 10. Classes
 
 Boken handlar i mångt och mycket om att gå ner på detaljnivå: metoder och variabelnamn. I kapitel 10 av Clean Code (135–151) lyfter man dock blicken en smula och kollar på hur vi organiserar koden på ett högre plan, i olika klasser. I kapitel 5 (ovan) resonerar jag lite om hur jag tänkt med uppdelningen av klasser, så då kan vi i stället rikta fokus mot min modul (L1). Enligt boken ska klasser, liksom metoder, vara små. Samma princip råder, och klasser ska ha ett ansvarsområde (138). Något som är upp till tolkning, men lite självkritiskt kan jag konstatera att det förmodligen varit bra för tydligheten att bryta ut modulen lite mer. Funktionaliten för biblioteket finns i `my-favorite-things.js`, men det hade kanske kunnat bli tydligare om jag exempelvis bröt ut delarna kring kalkylering till en egen klass. Samtidigt är mitt bibliotek relativt litet. Det snuddar inte vid taket för klasser (500 rader enligt boken), och jag tycker personligen det blir tydligt att bibliotekets funktionalitet ligger i en klass. Felhantering och själva databasen har jag brutit ut, då det kändes fullständigt naturligt.
@@ -76,6 +94,8 @@ Boken handlar i mångt och mycket om att gå ner på detaljnivå: metoder och va
 ![chapter10](img/chapter10.jpg)
 
 <br>
+
+***
 
 ## 11. Systems
 
@@ -85,19 +105,14 @@ Min applikation är uppbyggd med webbkomponenter. Komponenterna är byggda efter
 
 <br>
 
+***
+
 ## Avslutande reflektion
 
+Under första året har jag kodat med inställningen *"Det ska funka!"*, men nu har jag även fått insikten att *"Det ska funka, för andra!"* Min kod är ingen isolerad ö. Den ska läsas av fler. Den här kursen var vad jag behövde på min resa mot att bli webbprogrammerare. Jag var redo för den nu.
 
-170
+Djävulen sitter onekligen i detaljerna. Att skriva tydliga variabelnamn och logiska metoder låter inte som kärnfysik, men det finns många falluckor på vägen. Ganska ofta måste man också hitta kompromisser i sina lösningar. Det är givetvis bra att vara tydlig i metodnamn men drar man det till sin spets kan det rentav bli så plottrigt att tydligheten tackar för sig. Min nyckel har varit ordet "lagom". Att *inte* dra reglerna till sin spets gör det ofta enkelt att hålla dem.
 
+Det tydliga och rena ska löpa som en röd tråd genom allt: klasser, kommentarer, systemets arkitektur. Det är mycket som blivit tydligare. En metod ska exempelvis göra en sak, och göra den bra. Tidigare har jag inte reflekterat över detta, och jag har heller inte haft tydliga ramar. Det kändes (för att återgå till ordet) lagom att introduceras för detta nu.
 
-
-//////// Gå igenom all kod inklusive kod från laboration 1 och uppdatera enligt bokens clean code kapitel 2-11 och det vi diskuterat på föreläsningar och workshops. Skriv en kort (4-6 meningar) reflektion för varje kapitel om hur just det kapitlet har påverkat eller inte påverkat din kod. Använd bokens termer. Ge exempel med läsbara screenshots från er kod till varje reflektion. Dokumentera detta till mig i ett separat dokument reflection.md där jag är mottagaren.
-
-Fokusera på tydlighet, variation, ärlighet och vad som är intressant. Exempelvis om du har icke självklara överväganden med olika kvalitetsregler som står i konflikt med varandra så är dessa extra intressanta.
-
-Jag kommer även titta på och bedöma er kod. Den skall därför i största mån vara skriven för att kunna fortsätta utvecklas av andra programmerare. 
-
-
-
-C. Martin, Robert. 2009. Clean Code, 145-162.
+Det fanns verkligen ett syfte i att göra många misstag med koden i laboration 1, för då fanns det extra mycket att bearbeta och reflektera kring. Givetvis är jag inte fullärd, men det är man å andra sidan aldrig.
