@@ -1,7 +1,7 @@
 # My Favorite Games
 
-A web application which demonstrates a video game collection and statistics concerning grades and play time.
-This application is meant for an **end-user** with a video game collection. If you are a **developer** you should check out the GitHub repositorium with the [My Favorite Things](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1), with methods and a database which this application implements. A developer shoud also find the [DEVELOPER](/DEVELOPER.md) file of great interest with requirements, vision and test report. If you are an **examinator** all of the above of course is of interest, as well as [REFLECTION](/REFLECTION.md) file with code reflections using the book Clean Code.
+This is a web application which demonstrates a video game collection and statistics concerning grades and play time of the collection.
+This application is meant for a specific **end-user** with said video game collection. If you are a **developer** you should check out the GitHub repositorium with the [My Favorite Things](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1) library, with methods and a database which this application implements. A developer shoud also find the [DEVELOPER](/DEVELOPER.md) file of great interest with requirements, vision and a test report. If you are an **examinator** all of the above is of value, as well as the [REFLECTION](/REFLECTION.md) file with code reflections using the book Clean Code.
 
 ***
 
@@ -32,13 +32,13 @@ The application is built via **HTML**, **CSS** and **JavaScript**, primarily by 
 
 ## Installation
 
-1. Copy the repository via [GitHub](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2), `https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1.git`
+1. Copy the repository via [GitHub](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2), `https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2.git`
 2. Open a terminal window in a folder where you want to clone the repositorium.
-3. Input the command `git clone https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1.git` to clone the project.
+3. Input the command `git clone https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2.git` to clone the project.
 4. Open an integrated development environment (IDE) of your choice.
 5. Run the commando `npm install` to install dependecies.
 6. Run the commando `npm run dev` to try out the application in a local host.
-7. To utilize the app to its fullest you should also install the My Favorite Things library. More information [here](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L1).
+7. To utilize the app to its fullest you should also implement the My Favorite Things library. More information [here](https://github.com/bamseponny/1dv610-mjukvarukvalitet-L2).
 
 ***
 
